@@ -22,6 +22,16 @@ Dialog::Dialog(QWidget *parent) :
     qDebug() << QString("(data1 < 11) && (data2 > 2) = %1").arg((data1 < 11) && (data2 > 2));
     qDebug() << QString("(data1 < 11) || (data2 < 2) = %1").arg((data1 < 11) || (data2 < 2));
     qDebug() << QString("!(data1 < 11) = %1").arg(!(data1 < 11));
+//동적배열선언
+    for(a = 0; a < height; a++){
+        gugu[a] = new int[width];
+    }
+
+//    for(int a = 0; a<9;a++){
+//        delete[] gugu[a];
+//    }
+//    delete[] gugu;  동적배열해제
+
 
     //int* gugu = new int[9];
     for(i = 0; i<10 ;i++){
@@ -32,6 +42,8 @@ Dialog::Dialog(QWidget *parent) :
             //ui->textBrowser->append(QString::number(gugu[i][j]));
         }
     }
+
+
 }
 
 Dialog::~Dialog()
@@ -88,6 +100,7 @@ void Dialog::on_pushButton_4_clicked()
 
     }
     k++;
+
 
     //ui->textBrowser->setText(QString("!(data1 < 11) = %1").arg(!(data1 < 11)));
     //ui->lineEdit->setText(QString::number(data));

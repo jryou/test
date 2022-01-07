@@ -32,7 +32,11 @@ private:
     int i;
     int j;
     int k = 0;
-    int gugu[10][10];
+    //int gugu[10][10];
+    int a;
+    int height = 10,width = 10;
+    int **gugu = new int*[height];
+
 
 
 };
