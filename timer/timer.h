@@ -2,7 +2,8 @@
 #define TIMER_H
 
 #include <QMainWindow>
-
+#include <QTimer>
+#include <QDateTime>
 namespace Ui {
 class timer;
 }
@@ -17,6 +18,9 @@ public:
 
 private:
     Ui::timer *ui;
+    QTimer* timer1;
+private slots:
+    int tupdate();
 };
 
 #endif // TIMER_H

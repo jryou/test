@@ -17,6 +17,11 @@ public:
 
 private:
     Ui::dialog *ui;
+
+private:
+    QStringList QStringList_filter(const QStringList *that,const QRegExp &rx);
+    QStringList regExp(const QStringList *that);
 };
+
 
 #endif // DIALOG_H
